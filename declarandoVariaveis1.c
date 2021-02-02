@@ -21,7 +21,6 @@ int main(int argc,char *argv[]){
 
     /*especificação de tipos*/
     printf("meu nome e: %s, tenho: %d anos de idade, altura: %.2f e estudei que pi e um numero aproximado de: %lf ...",nome,idade,altura,pi);
-<<<<<<< HEAD
 
     /*----------------------------------------- Lendo valores do teclado com scanf_precisa indicar o tipo da variavel destino e a variavel-------------------------------------*/
     printf("informe sua idade: ");
@@ -54,13 +53,29 @@ int main(int argc,char *argv[]){
         printf("Agora Do while\n");
         x++; 
     }while(x<10);
-    /*--------------------------------------------------- Lendo valores do teclado -----------------------------------------------*/
-    printf("meu nome e: %s, tenho: %d anos de idade, altura: %.2f e estudei que pi e um numero aproximado de: %lf ...",nome,idade,altura,pi);
-    /*--------------------------------------------------- DIgite um numero -----------------------------------------------*/
-    /*--------------------------------------------------- DIgite um numero -----------------------------------------------*/
-    /*--------------------------------------------------- DIgite um numero -----------------------------------------------*/
-    /*----------------------------------------------------------------------------------- Vetores -----------------------------------------------------------------------------------*/
-    
+    /* ---------------------------------------------------------------------------------- Vetores ----------------------------------------------------------------------------------*/    
+    /* vetor de inteiros --  calcular tamanho de um vetor --> sizeof(vetor)/sizeof(int)*/
+    int vetorInteiro[10]={0,1,2,3,4,5,6,7,8,9};
+    for(int i =0;i<10;i++){
+        printf("%i |",vetorInteiro[i]);
+     }
+    printf("\n");
+
+    for(int i =0;i<10;i++){
+        printf("insira a nota %i:",i+1);
+        scanf("%i",&vetorInteiro[i]);
+    }
+    for(int i =0;i<10;i++){
+        printf("%i |",vetorInteiro[i]);
+    }
+    printf("\n");
+    /* vetor de caracteres -- */
+    char nome3[30]={'c','l','1','0'};
+    printf("%s\n",nome3);
+
+
+
+
 
     return 0;
 }
