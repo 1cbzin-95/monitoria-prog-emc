@@ -5,6 +5,7 @@ e char * argv [] é uma matriz de strings (ponteiros de caracteres) que represen
 argumentos individuais fornecidos na linha de comando. A função principal pode ter dois parâmetros, argc e argv .
 */
 int impaoupar(int numero);
+int validaCpf(char vetor[]);
 
 int main(int argc,char *argv[]){
     /*---------------------------------------------------Declarando variaveis em c-----------------------------------------------*/
@@ -37,8 +38,6 @@ int main(int argc,char *argv[]){
 
     printf("informe sua altura: ");
     scanf("%f",&altura);*/
-
-
     /*---------------------------------------------------------------------------------- Loop ------------------------------------------------------------------------------------*/
     for(int x=0;x<10;x++){
         printf("Agora vai\n");
@@ -73,13 +72,24 @@ int main(int argc,char *argv[]){
     char nome3[30]={'c','l','1','0'};
     printf("%s\n",nome3);
 
-
-
-
+    /*-----------------------------------------------------------valida cpf parte 1 sem os calculos -----------------------------------------------------------------------------*/
+    printf("Digite o seu cpf com pontuação no formato XXX.XXX.XXX-XX \n");
+    char cpf[15]={'1','1','9','.','9',' 9','8','.','0','8','4','-','9','1'};
+    int ehValido = validaCpf(cpf);
+    printf("%i",ehValido);
 
     return 0;
 }
 
 int impaoupar(int numero){
     return numero%2==0? 1:0;
+}
+int validaCpf(char vetor[]){
+    int ehValido=1;
+    for(int i=0;i<14;i++){
+        if(vetor[3]!='.' || vetor[7]!='.' || vetor[11]!='-'){
+            ehValido=0;
+        }
+    }
+    return ehValido;
 }
