@@ -14,6 +14,13 @@ void pesquisarUsuario(void);  // R
 void atualizarUsuario(void);  // U
 void excluirUsuario(void);    // D
 
+void moduloProduto(void);
+char menuProduto(void);
+// mais modulos a definir
+// void moduloEstoque(void);
+
+void moduloRelatorio(void);
+
 //telas
 void telaSobre(void);
 void telaCadastrarUsuario(void);  // C
@@ -21,7 +28,8 @@ void telaPesquisarUsuario(void);  // R
 void telaAtualizarUsuario(void);  // U
 void telaExcluirUsuario(void);    // D
 
-void moduloRelatorio(void);
+void telaProduto(void);
+
 void delay(int);
 
 // Programa Principal
@@ -32,6 +40,8 @@ int main(void) {
 		opcao = menuPrincipal();
 		switch(opcao) {
 			case '1': 	moduloUsuario();
+						break;
+			case '2': 	moduloProduto();
 						break;
 			case '4': 	moduloRelatorio();
 						break;
@@ -335,6 +345,44 @@ void telaExcluirUsuario(void) {
 	printf("\n");
 	delay(1);
 }
+char menuProduto(void){
+	char op;
+    system("clear");
+	printf("\n");
+	printf("|-----------------------------------------------------------------------|\n");
+	printf("|                                                                       |\n");
+	printf("|          ===================================================          |\n");
+	printf("|          = = = = = = = = = = = = = = = = = = = = = = = = = =          |\n");
+	printf("|          = = = =       Controle de Estoque           = = = =          |\n");
+	printf("|          = = = = = = = = = = = = = = = = = = = = = = = = = =          |\n");
+	printf("|          ===================================================          |\n");
+	printf("|                Developed by  @clodoaldobrito - Jan, 2021              |\n");
+	printf("|                                                                       |\n");
+	printf("|-----------------------------------------------------------------------|\n");
+	printf("|                                                                       |\n");
+	printf("|           = = = = = = = = = = = = = = = = = = = = = = = =             |\n");
+	printf("|           = = = = = = = = =  Menu Usuario = = = = = = = =             |\n");
+	printf("|           = = = = = = = = = = = = = = = = = = = = = = = =             |\n");
+	printf("|                                                                       |\n");
+	printf("|           1. Cadastrar um novo Produto                                |\n");
+	printf("|           2. Pesquisar os dados de um Produto                         |\n");
+	printf("|           3. Atualizar o cadastro de um Produto                       |\n");
+	printf("|           4. Excluir um Produto do sistema                            |\n");
+	printf("|           0. Voltar ao menu anterior                                  |\n");
+	printf("|                                                                       |\n");
+	printf("|           Escolha a opção desejada: ");
+	scanf("%c", &op);
+	getchar();
+	printf("|                                                                       |\n");
+	printf("|                                                                       |\n");
+	printf("|-----------------------------------------------------------------------|\n");
+	printf("\n");
+	delay(1);
+	return op;
+}
+void telaProduto(void){
+
+}
 void moduloRelatorio(void) {
 	// modulo em desenvolvimento
 
@@ -343,4 +391,20 @@ void moduloInformacoes(void) {
 	// modulo em desenvolvimento
 	telaSobre();
 
+}
+void moduloProduto(void){
+	char opcao;
+	do {
+		opcao = menuProduto();
+		switch(opcao) {
+			case '1': 	//cadastrarProduto();
+						break;
+			case '2': 	//pesquisarProduto();
+						break;
+			case '3': 	//atualizarProduto();
+						break;
+			case '4': 	//excluirProduto();
+						break;
+		} 		
+	} while (opcao != '0');
 }
