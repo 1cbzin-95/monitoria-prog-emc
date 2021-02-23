@@ -1,12 +1,3 @@
-///-------------------------------------------------------------------------///
-///             Universidade Federal do Rio Grande do Norte                 ///
-///                 Centro de Ensino Superior do Seridó                     ///
-///               Departamento de Computação e Tecnologia                   ///
-///                  Disciplina DCT1106 -- Programação                      ///
-///                  Projeto Sistema de Gestão Escolar                      ///
-///                Developed by  @flgorgonio - Jan, 2021                    ///
-///-------------------------------------------------------------------------///
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -92,7 +83,6 @@ char menuPrincipal(void) {
 	return op;
 }
 
-
 void telaSobre(void) {
     system("clear");
 	printf("\n");
@@ -127,7 +117,6 @@ void telaSobre(void) {
 	getchar();
 }
 
-
 void delay(int segundos) {
   int tempo = 500000 * segundos;
   clock_t inicio = clock();
@@ -135,7 +124,6 @@ void delay(int segundos) {
     // não faz nada, apenas gasta tempo
   }
 }
-
 
 //								Módulo Usuario
 
@@ -156,13 +144,11 @@ void moduloUsuario(void) {
 	} while (opcao != '0');
 }
 
-
 void cadastrarUsuario(void) {
 	// função ainda em desenvolvimento
 	// exibe a tela apenas para testes
 	telaCadastrarUsuario();
 }
-
 
 void pesquisarUsuario(void) {
 	// função ainda em desenvolvimento
@@ -170,20 +156,17 @@ void pesquisarUsuario(void) {
 	telaPesquisarUsuario();
 }
 
-
 void atualizarUsuario(void) {
 	// função ainda em desenvolvimento
 	// exibe a tela apenas para testes
 	telaAtualizarUsuario();
 }
 
-
 void excluirUsuario(void) {
 	// função ainda em desenvolvimento
 	// exibe a tela apenas para testes
 	telaExcluirUsuario();
 }
-
 
 char menuUsuario(void) {
 	char op;
@@ -196,7 +179,7 @@ char menuUsuario(void) {
 	printf("|          = = = =       Controle de Estoque           = = = =          |\n");
 	printf("|          = = = = = = = = = = = = = = = = = = = = = = = = = =          |\n");
 	printf("|          ===================================================          |\n");
-	printf("|                Developed by  @flgorgonio - Jan, 2021                  |\n");
+	printf("|                Developed by  @clodoaldobrito - Jan, 2021              |\n");
 	printf("|                                                                       |\n");
 	printf("|-----------------------------------------------------------------------|\n");
 	printf("|                                                                       |\n");
@@ -217,10 +200,9 @@ char menuUsuario(void) {
 	printf("|                                                                       |\n");
 	printf("|-----------------------------------------------------------------------|\n");
 	printf("\n");
-	delay(2);
+	delay(1);
 	return op;
 }
-
 
 void telaCadastrarUsuario(void) {
 	char matr[12];
@@ -228,17 +210,16 @@ void telaCadastrarUsuario(void) {
 	char email[51];
 	char nasc[11];
 	char celular[12];
-
     system("clear");
 	printf("\n");
 	printf("|-----------------------------------------------------------------------|\n");
 	printf("|                                                                       |\n");
 	printf("|          ===================================================          |\n");
 	printf("|          = = = = = = = = = = = = = = = = = = = = = = = = = =          |\n");
-	printf("|          = = = =   Escola de Idiomas Língua Solta    = = = =          |\n");
+	printf("|          = = = =       Controle de Estoque           = = = =          |\n");
 	printf("|          = = = = = = = = = = = = = = = = = = = = = = = = = =          |\n");
 	printf("|          ===================================================          |\n");
-	printf("|                Developed by  @flgorgonio - Jan, 2021                  |\n");
+	printf("|                Developed by  @clodoaldobrito - Jan, 2021              |\n");
 	printf("|                                                                       |\n");
 	printf("|-----------------------------------------------------------------------|\n");
 	printf("|                                                                       |\n");
@@ -265,23 +246,21 @@ void telaCadastrarUsuario(void) {
 	printf("|                                                                       |\n");
 	printf("|-----------------------------------------------------------------------|\n");
 	printf("\n");
-	delay(2);
+	delay(1);
 }
-
 
 void telaPesquisarUsuario(void) {
 	char matr[12];
-
     system("clear");
 	printf("\n");
 	printf("|-----------------------------------------------------------------------|\n");
 	printf("|                                                                       |\n");
 	printf("|          ===================================================          |\n");
 	printf("|          = = = = = = = = = = = = = = = = = = = = = = = = = =          |\n");
-	printf("|          = = = =   Escola de Idiomas Língua Solta    = = = =          |\n");
+	printf("|          = = = =       Controle de Estoque           = = = =          |\n");
 	printf("|          = = = = = = = = = = = = = = = = = = = = = = = = = =          |\n");
 	printf("|          ===================================================          |\n");
-	printf("|                Developed by  @flgorgonio - Jan, 2021                  |\n");
+	printf("|                Developed by  @clodoaldobrito - Jan, 2021              |\n");
 	printf("|                                                                       |\n");
 	printf("|-----------------------------------------------------------------------|\n");
 	printf("|                                                                       |\n");
@@ -296,22 +275,21 @@ void telaPesquisarUsuario(void) {
 	printf("|                                                                       |\n");
 	printf("|-----------------------------------------------------------------------|\n");
 	printf("\n");
-	delay(2);
+	delay(1);
 }
 
 void telaAtualizarUsuario(void) {
 	char matr[12];
-
     system("clear");
 	printf("\n");
 	printf("|-----------------------------------------------------------------------|\n");
 	printf("|                                                                       |\n");
 	printf("|          ===================================================          |\n");
 	printf("|          = = = = = = = = = = = = = = = = = = = = = = = = = =          |\n");
-	printf("|          = = = =   Escola de Idiomas Língua Solta    = = = =          |\n");
+	printf("|          = = = =       Controle de Estoque           = = = =          |\n");
 	printf("|          = = = = = = = = = = = = = = = = = = = = = = = = = =          |\n");
 	printf("|          ===================================================          |\n");
-	printf("|                Developed by  @flgorgonio - Jan, 2021                  |\n");
+	printf("|                Developed by  @clodoaldobrito - Jan, 2021              |\n");
 	printf("|                                                                       |\n");
 	printf("|-----------------------------------------------------------------------|\n");
 	printf("|                                                                       |\n");
@@ -326,22 +304,21 @@ void telaAtualizarUsuario(void) {
 	printf("|                                                                       |\n");
 	printf("|-----------------------------------------------------------------------|\n");
 	printf("\n");
-	delay(2);
+	delay(1);
 }
 
 void telaExcluirUsuario(void) {
 	char matr[12];
-
     system("clear");
 	printf("\n");
 	printf("|-----------------------------------------------------------------------|\n");
 	printf("|                                                                       |\n");
 	printf("|          ===================================================          |\n");
 	printf("|          = = = = = = = = = = = = = = = = = = = = = = = = = =          |\n");
-	printf("|          = = = =   Escola de Idiomas Língua Solta    = = = =          |\n");
+	printf("|          = = = =       Controle de Estoque           = = = =          |\n");
 	printf("|          = = = = = = = = = = = = = = = = = = = = = = = = = =          |\n");
 	printf("|          ===================================================          |\n");
-	printf("|                Developed by  @flgorgonio - Jan, 2021                  |\n");
+	printf("|                Developed by  @clodoaldobrito - Jan, 2021              |\n");
 	printf("|                                                                       |\n");
 	printf("|-----------------------------------------------------------------------|\n");
 	printf("|                                                                       |\n");
@@ -356,7 +333,7 @@ void telaExcluirUsuario(void) {
 	printf("|                                                                       |\n");
 	printf("|-----------------------------------------------------------------------|\n");
 	printf("\n");
-	delay(2);
+	delay(1);
 }
 void moduloRelatorio(void) {
 	// modulo em desenvolvimento
