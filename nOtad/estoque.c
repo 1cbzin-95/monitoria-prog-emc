@@ -387,6 +387,7 @@ void atuaizarRela(void){
 }
 void verporData(Relat *fichario){//##
 	long int comparar;
+	int encontrado=0;
 	printf("informe o id:");
 	scanf("%ld",&comparar);
 	int d,m,a; int df,mf,af;
