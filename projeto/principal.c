@@ -1,38 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include "delay.h"
+#include "usuario.h"
+#include "produto.h"
+
 // Assinaturas das funções
 char menuPrincipal(void);
 void moduloInformacoes(void);
-void telaSobre(void);
-
-//modulo Usuario
-void moduloUsuario(void);
-char menuUsuario(void);
-void cadastrarUsuario(void);  // C
-void pesquisarUsuario(void);  // R
-void atualizarUsuario(void);  // U
-void excluirUsuario(void);    // D
-
-void moduloProduto(void);
-char menuProduto(void);
-// mais modulos a definir
-// void moduloEstoque(void);
-
 void moduloRelatorio(void);
 
-//telas
-void telaSobre(void);
-void telaCadastrarUsuario(void);  // C
-void telaPesquisarUsuario(void);  // R
-void telaAtualizarUsuario(void);  // U
-void telaExcluirUsuario(void);    // D
-
-void telaProduto(void);
-
-void delay(int);
-
-// Programa Principal
+void telaSobre(void);// mais modulos a definir, void moduloEstoque(void);
 
 int main(void) {
 	char opcao;
@@ -56,6 +34,15 @@ int main(void) {
 	} while (opcao != '0');
 	return 0;    
 }
+void moduloRelatorio(void) {
+	// modulo em desenvolvimento
+
+}
+void moduloInformacoes(void) {
+	// modulo em desenvolvimento
+	telaSobre();
+}
+
 char menuPrincipal(void) {
 	char op;
     system("clear");
@@ -125,286 +112,4 @@ void telaSobre(void) {
 	printf("\n");
 	printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
 	getchar();
-}
-
-void delay(int segundos) {
-  int tempo = 500000 * segundos;
-  clock_t inicio = clock();
-  while (clock() < inicio + tempo) {
-    // não faz nada, apenas gasta tempo
-  }
-}
-
-//								Módulo Usuario
-
-void moduloUsuario(void) {
-	char opcao;
-	do {
-		opcao = menuUsuario();
-		switch(opcao) {
-			case '1': 	cadastrarUsuario();
-						break;
-			case '2': 	pesquisarUsuario();
-						break;
-			case '3': 	atualizarUsuario();
-						break;
-			case '4': 	excluirUsuario();
-						break;
-		} 		
-	} while (opcao != '0');
-}
-
-void cadastrarUsuario(void) {
-	// função ainda em desenvolvimento
-	// exibe a tela apenas para testes
-	telaCadastrarUsuario();
-}
-
-void pesquisarUsuario(void) {
-	// função ainda em desenvolvimento
-	// exibe a tela apenas para testes
-	telaPesquisarUsuario();
-}
-
-void atualizarUsuario(void) {
-	// função ainda em desenvolvimento
-	// exibe a tela apenas para testes
-	telaAtualizarUsuario();
-}
-
-void excluirUsuario(void) {
-	// função ainda em desenvolvimento
-	// exibe a tela apenas para testes
-	telaExcluirUsuario();
-}
-
-char menuUsuario(void) {
-	char op;
-    system("clear");
-	printf("\n");
-	printf("|-----------------------------------------------------------------------|\n");
-	printf("|                                                                       |\n");
-	printf("|          ===================================================          |\n");
-	printf("|          = = = = = = = = = = = = = = = = = = = = = = = = = =          |\n");
-	printf("|          = = = =       Controle de Estoque           = = = =          |\n");
-	printf("|          = = = = = = = = = = = = = = = = = = = = = = = = = =          |\n");
-	printf("|          ===================================================          |\n");
-	printf("|                Developed by  @clodoaldobrito - Jan, 2021              |\n");
-	printf("|                                                                       |\n");
-	printf("|-----------------------------------------------------------------------|\n");
-	printf("|                                                                       |\n");
-	printf("|           = = = = = = = = = = = = = = = = = = = = = = = =             |\n");
-	printf("|           = = = = = = = = =  Menu Usuario = = = = = = = =             |\n");
-	printf("|           = = = = = = = = = = = = = = = = = = = = = = = =             |\n");
-	printf("|                                                                       |\n");
-	printf("|           1. Cadastrar um novo Usuario                                |\n");
-	printf("|           2. Pesquisar os dados de um Usuario                         |\n");
-	printf("|           3. Atualizar o cadastro de um Usuario                       |\n");
-	printf("|           4. Excluir um Usuario do sistema                            |\n");
-	printf("|           0. Voltar ao menu anterior                                  |\n");
-	printf("|                                                                       |\n");
-	printf("|           Escolha a opção desejada: ");
-	scanf("%c", &op);
-	getchar();
-	printf("|                                                                       |\n");
-	printf("|                                                                       |\n");
-	printf("|-----------------------------------------------------------------------|\n");
-	printf("\n");
-	delay(1);
-	return op;
-}
-
-void telaCadastrarUsuario(void) {
-	char matr[12];
-	char nome[51];
-	char email[51];
-	char nasc[11];
-	char celular[12];
-    system("clear");
-	printf("\n");
-	printf("|-----------------------------------------------------------------------|\n");
-	printf("|                                                                       |\n");
-	printf("|          ===================================================          |\n");
-	printf("|          = = = = = = = = = = = = = = = = = = = = = = = = = =          |\n");
-	printf("|          = = = =       Controle de Estoque           = = = =          |\n");
-	printf("|          = = = = = = = = = = = = = = = = = = = = = = = = = =          |\n");
-	printf("|          ===================================================          |\n");
-	printf("|                Developed by  @clodoaldobrito - Jan, 2021              |\n");
-	printf("|                                                                       |\n");
-	printf("|-----------------------------------------------------------------------|\n");
-	printf("|                                                                       |\n");
-	printf("|           = = = = = = = = = = = = = = = = = = = = = = = =             |\n");
-	printf("|           = = = = = = = = Cadastrar Usuario = = = = = = = =           |\n");
-	printf("|           = = = = = = = = = = = = = = = = = = = = = = = =             |\n");
-	printf("|                                                                       |\n");
-	printf("|           Matrícula (apenas números): ");
-	scanf("%[0-9]", matr);
-	getchar();
-	printf("|           Nome completo: ");
-	scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]", nome);
-	getchar();
-	printf("|           E-mail: ");
-	scanf("%[a-z@.]", email);
-	getchar();
-	printf("|           Data de Nascimento (dd/mm/aaaa):  ");
-	scanf("%[0-9/]", nasc);
-	getchar();
-	printf("|           Celular  (apenas números): ");
-	scanf("%[0-9]", celular);
-	getchar();
-	printf("|                                                                       |\n");
-	printf("|                                                                       |\n");
-	printf("|-----------------------------------------------------------------------|\n");
-	printf("\n");
-	delay(1);
-}
-
-void telaPesquisarUsuario(void) {
-	char matr[12];
-    system("clear");
-	printf("\n");
-	printf("|-----------------------------------------------------------------------|\n");
-	printf("|                                                                       |\n");
-	printf("|          ===================================================          |\n");
-	printf("|          = = = = = = = = = = = = = = = = = = = = = = = = = =          |\n");
-	printf("|          = = = =       Controle de Estoque           = = = =          |\n");
-	printf("|          = = = = = = = = = = = = = = = = = = = = = = = = = =          |\n");
-	printf("|          ===================================================          |\n");
-	printf("|                Developed by  @clodoaldobrito - Jan, 2021              |\n");
-	printf("|                                                                       |\n");
-	printf("|-----------------------------------------------------------------------|\n");
-	printf("|                                                                       |\n");
-	printf("|           = = = = = = = = = = = = = = = = = = = = = = = =             |\n");
-	printf("|           = = = = = = = = Pesquisar Usuario = = = = = = = =           |\n");
-	printf("|           = = = = = = = = = = = = = = = = = = = = = = = =             |\n");
-	printf("|                                                                       |\n");
-	printf("|           Informe a matrícula do Usuario (apenas números): ");
-	scanf("%[0-9]", matr);
-	getchar();
-	printf("|                                                                       |\n");
-	printf("|                                                                       |\n");
-	printf("|-----------------------------------------------------------------------|\n");
-	printf("\n");
-	delay(1);
-}
-
-void telaAtualizarUsuario(void) {
-	char matr[12];
-    system("clear");
-	printf("\n");
-	printf("|-----------------------------------------------------------------------|\n");
-	printf("|                                                                       |\n");
-	printf("|          ===================================================          |\n");
-	printf("|          = = = = = = = = = = = = = = = = = = = = = = = = = =          |\n");
-	printf("|          = = = =       Controle de Estoque           = = = =          |\n");
-	printf("|          = = = = = = = = = = = = = = = = = = = = = = = = = =          |\n");
-	printf("|          ===================================================          |\n");
-	printf("|                Developed by  @clodoaldobrito - Jan, 2021              |\n");
-	printf("|                                                                       |\n");
-	printf("|-----------------------------------------------------------------------|\n");
-	printf("|                                                                       |\n");
-	printf("|           = = = = = = = = = = = = = = = = = = = = = = = =             |\n");
-	printf("|           = = = = = = = = Atualizar Usuario = = = = = = = =           |\n");
-	printf("|           = = = = = = = = = = = = = = = = = = = = = = = =             |\n");
-	printf("|                                                                       |\n");
-	printf("|           Informe a matrícula do Usuario (apenas números): ");
-	scanf("%[0-9]", matr);
-	getchar();
-	printf("|                                                                       |\n");
-	printf("|                                                                       |\n");
-	printf("|-----------------------------------------------------------------------|\n");
-	printf("\n");
-	delay(1);
-}
-
-void telaExcluirUsuario(void) {
-	char matr[12];
-    system("clear");
-	printf("\n");
-	printf("|-----------------------------------------------------------------------|\n");
-	printf("|                                                                       |\n");
-	printf("|          ===================================================          |\n");
-	printf("|          = = = = = = = = = = = = = = = = = = = = = = = = = =          |\n");
-	printf("|          = = = =       Controle de Estoque           = = = =          |\n");
-	printf("|          = = = = = = = = = = = = = = = = = = = = = = = = = =          |\n");
-	printf("|          ===================================================          |\n");
-	printf("|                Developed by  @clodoaldobrito - Jan, 2021              |\n");
-	printf("|                                                                       |\n");
-	printf("|-----------------------------------------------------------------------|\n");
-	printf("|                                                                       |\n");
-	printf("|           = = = = = = = = = = = = = = = = = = = = = = = =             |\n");
-	printf("|           = = = = = = = =  Excluir Usuario  = = = = = = = =           |\n");
-	printf("|           = = = = = = = = = = = = = = = = = = = = = = = =             |\n");
-	printf("|                                                                       |\n");
-	printf("|           Informe a matrícula do Usuario (apenas números): ");
-	scanf("%[0-9]", matr);
-	getchar();
-	printf("|                                                                       |\n");
-	printf("|                                                                       |\n");
-	printf("|-----------------------------------------------------------------------|\n");
-	printf("\n");
-	delay(1);
-}
-char menuProduto(void){
-	char op;
-    system("clear");
-	printf("\n");
-	printf("|-----------------------------------------------------------------------|\n");
-	printf("|                                                                       |\n");
-	printf("|          ===================================================          |\n");
-	printf("|          = = = = = = = = = = = = = = = = = = = = = = = = = =          |\n");
-	printf("|          = = = =       Controle de Estoque           = = = =          |\n");
-	printf("|          = = = = = = = = = = = = = = = = = = = = = = = = = =          |\n");
-	printf("|          ===================================================          |\n");
-	printf("|                Developed by  @clodoaldobrito - Jan, 2021              |\n");
-	printf("|                                                                       |\n");
-	printf("|-----------------------------------------------------------------------|\n");
-	printf("|                                                                       |\n");
-	printf("|           = = = = = = = = = = = = = = = = = = = = = = = =             |\n");
-	printf("|           = = = = = = = = =  Menu Usuario = = = = = = = =             |\n");
-	printf("|           = = = = = = = = = = = = = = = = = = = = = = = =             |\n");
-	printf("|                                                                       |\n");
-	printf("|           1. Cadastrar um novo Produto                                |\n");
-	printf("|           2. Pesquisar os dados de um Produto                         |\n");
-	printf("|           3. Atualizar o cadastro de um Produto                       |\n");
-	printf("|           4. Excluir um Produto do sistema                            |\n");
-	printf("|           0. Voltar ao menu anterior                                  |\n");
-	printf("|                                                                       |\n");
-	printf("|           Escolha a opção desejada: ");
-	scanf("%c", &op);
-	getchar();
-	printf("|                                                                       |\n");
-	printf("|                                                                       |\n");
-	printf("|-----------------------------------------------------------------------|\n");
-	printf("\n");
-	delay(1);
-	return op;
-}
-void telaProduto(void){
-
-}
-void moduloRelatorio(void) {
-	// modulo em desenvolvimento
-
-}
-void moduloInformacoes(void) {
-	// modulo em desenvolvimento
-	telaSobre();
-
-}
-void moduloProduto(void){
-	char opcao;
-	do {
-		opcao = menuProduto();
-		switch(opcao) {
-			case '1': 	//cadastrarProduto();
-						break;
-			case '2': 	//pesquisarProduto();
-						break;
-			case '3': 	//atualizarProduto();
-						break;
-			case '4': 	//excluirProduto();
-						break;
-		} 		
-	} while (opcao != '0');
 }
