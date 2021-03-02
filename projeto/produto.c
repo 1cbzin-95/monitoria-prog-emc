@@ -1,7 +1,7 @@
 #include <stdio.h>
-#include <time.h>
+#include <stdlib.h>
 #include "produto.h"
-#include "delay.h"
+#include "tempo.h"
 
 void moduloProduto(void){
 	char opcao;

@@ -1,7 +1,7 @@
 #include <stdio.h>
-#include <time.h>
+#include <stdlib.h>
+#include "tempo.h"
 #include "usuario.h"
-#include "delay.h"
 //								Módulo Usuario
 void moduloUsuario(void) {
 	char opcao;

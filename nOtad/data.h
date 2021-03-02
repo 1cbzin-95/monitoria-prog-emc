@@ -10,3 +10,4 @@ int saberanoatual(int ano);
 int calculaVencimento(int dia,int mes,int ano,int sdia,int smes,int sano);
 int pegarQuantidade(void);
 int verif_data(char dateString[]);
+
