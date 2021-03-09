@@ -14,20 +14,6 @@ int main(int argc, char *argv[]){
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 void bagunca(int *vetor,int tamanho){
     int vetorAux[tamanho];
     for(int i=0;i<tamanho;i++){
