@@ -3,12 +3,26 @@
 void bagunca(int *vetor,int tamanho);
 void mostraVetor(int vetor[],int tamanho);
 
+//estruturas --> structs
+struct horario{//definir o tipo
+        int horas;
+        int minuto;
+        int segundo;
+        //bool verdadeiro;
+};
+
 int main(int argc, char *argv[]){
     int vetor[5]={1,2,3,4,5};
     mostraVetor(vetor,5);
     bagunca(vetor,5);
     printf("------------------------\n");
     mostraVetor(vetor,5);
+    printf("------------------------\n");
+    struct horario Agora; //harario é o tipo ->agora é o nome da estrutura;
+
+    Agora.horas = 15;//acessar e definir valor dentro da estrutura
+    printf("%i <- -> \n",Agora.horas);
+
 
     return 0;
 }
