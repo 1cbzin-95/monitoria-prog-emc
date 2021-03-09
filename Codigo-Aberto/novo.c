@@ -2,6 +2,7 @@
 
 void bagunca(int *vetor,int tamanho);
 void mostraVetor(int vetor[],int tamanho);
+//struct 
 
 //estruturas --> structs
 struct horario{//definir o tipo
@@ -10,6 +11,15 @@ struct horario{//definir o tipo
         int segundo;
         //bool verdadeiro;
 };
+
+struct hora{                     //definindo estrutura e em seguida variavel do tipo dela para ser utilizada;
+    int horas;
+    int minuto;
+    int segundo;
+    //bool verdadeiro;
+}Horario,QualquerOutra,Maisuma;
+
+void printarEstrutura(struct horario x);
 
 int main(int argc, char *argv[]){
     int vetor[5]={1,2,3,4,5};
@@ -23,11 +33,16 @@ int main(int argc, char *argv[]){
     Agora.horas = 15;//acessar e definir valor dentro da estrutura
     printf("%i <- -> \n",Agora.horas);
 
+    printarEstrutura(Agora);
+
 
     return 0;
 }
 
-
+//struct horario 
+void printarEstrutura(struct horario x){
+    printf("sao :%d horas \n",x.horas);
+}
 void bagunca(int *vetor,int tamanho){
     int vetorAux[tamanho];
     for(int i=0;i<tamanho;i++){
